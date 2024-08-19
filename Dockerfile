@@ -21,4 +21,4 @@ RUN dotnet publish "./LIT_WEB_APIs_V1.csproj" -c $BUILD_CONFIGURATION -o /app/pu
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "LIT_WEB_APIs_V1.dll"]
+ENTRYPOINT ["dotnet", "LIT_WEB_APIs_V1.dll","--server.urls","http://+8087"]
