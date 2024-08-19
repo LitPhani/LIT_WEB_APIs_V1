@@ -1,0 +1,6 @@
+@LIT_WEB_APIs_V1_HostAddress = http://localhost:5010
+
+GET {{LIT_WEB_APIs_V1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
