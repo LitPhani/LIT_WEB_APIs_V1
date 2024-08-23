@@ -3,7 +3,7 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-ENV ASPNETCORE_URLS=http://*:8087
+ENV ASPNETCORE_URLS=http://89.116.34.164:8087
 EXPOSE 8087
 
 
@@ -23,4 +23,4 @@ RUN dotnet publish "./LIT_WEB_APIs_V1.csproj" -c $BUILD_CONFIGURATION -o /app/pu
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "watch", "run", "LIT_WEB_APIs_V1.dll"]
+ENTRYPOINT ["dotnet", " watch", " run", "LIT_WEB_APIs_V1.dll"]
